@@ -5,6 +5,8 @@ import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 import * as yup from "yup";
 import schema from "./Validation/formSchema";
+import Header from "./components/Header";
+import "./App.css";
 
 const initialFormValues = {
   name: "",
@@ -54,6 +56,7 @@ const App = () => {
 
   return (
     <div>
+      <Header />
       <Switch>
         <Route path="/pizza">
           <Form
